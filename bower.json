@@ -1,0 +1,21 @@
+{
+  "name": "reacttest",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "kymwei <kymwei1002@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kymwei/ReactMao",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
