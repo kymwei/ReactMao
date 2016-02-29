@@ -17,5 +17,8 @@
   ],
   "devDependencies": {
     "bootstrap": "^3.3.6"
+  },
+  "dependencies": {
+    "react": "^0.14.7"
   }
 }
