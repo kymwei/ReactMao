@@ -17,7 +17,7 @@ router.get("/",function(req,res){
 //So if you have same URL but with different HTTP OP such as POST,GET etc
 //Then use route() to remove redundant code.
 
-router.route("/users")
+router.route("/foods")
     .get(function(req,res) {
         var response = {};
         mongoOp.find({}, function (err, data) {
@@ -34,13 +34,15 @@ router.route("/users")
         var db = new mongoOp();
         var response = {};
 
-        if (!req.body.email || !req.body.password) {
-            res.send('email and password both required');
+        if (!req.body.food || !req.body.stars || !req.body.password) {
+            res.send('food and stars both required');
             return;
         }
         // fetch email and password from REST request.
         // Add strict validation when you use this in Production.
-        db.userEmail = req.body.email;
+        db.food = req.body.food;
+
+        db.stars = req.body.stars;
         // Hash the password using SHA1 algorithm.
         // https://masteringmean.com/lessons/46-Encryption-and-password-hashing-with-Nodejs
         db.userPassword =
@@ -61,7 +63,7 @@ router.route("/users")
         //            console.log(userStore);
         //        });
         //});
-
+        db.addedDate.addToSet(new Date);
         db.save(function(err){
             // save() will run insert() command of MongoDB.
             // it will add new data in collection.
@@ -101,9 +103,13 @@ router.route("/users")
                 } else {
                     // we got data from Mongo.
                     // change it accordingly.
-                    if(req.body.userEmail !== undefined) {
+                    if(req.body.food !== undefined) {
                         // case where email needs to be updated.
-                        data.userEmail = req.body.userEmail;
+                        data.food = req.body.food;
+                    }
+                    if(req.body.stars !== undefined) {
+                        // case where password needs to be updated
+                        data.stars = req.body.stars;
                     }
                     if(req.body.userPassword !== undefined) {
                         // case where password needs to be updated
