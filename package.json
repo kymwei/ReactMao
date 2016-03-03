@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "go":"babel --presets react src --watch --out-dir build"
+    "go": "babel --presets react src --watch --out-dir build",
+    "start":"node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-preset-react": "^6.5.0",
     "babelify": "^7.2.0",
+    "body-parser": "^1.15.0",
     "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.5",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   }
