@@ -154,4 +154,4 @@ var fakedata = [{ id: 1, author: "Pete Hunt", text: "This is one comment" }, { i
 
 ReactDOM.render(
 // <CommentBox data={data} />,
-React.createElement(CommentBox, { url: 'http://kbb7303700.corp.kbb.com:3000/foods', pollInterval: 3000 }), document.getElementById('content'));
+React.createElement(CommentBox, { url: '/foods', pollInterval: 3000 }), document.getElementById('content'));

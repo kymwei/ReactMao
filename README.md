@@ -15,3 +15,13 @@ Navigate your browser to `http://localhost:3000/` for REST API, you can use post
   - coming soon
   - 
   - 
+
+### install babel to generate build src
+npm install --global babel-cli
+npm install babel-preset-react
+
+### mongo note
+
+mongod --dbpath c:/Users/username/Desktop/mongoData //for windows
+mongo
+use dbname ( this name should match mongoose db scheme )

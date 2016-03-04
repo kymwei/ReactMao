@@ -142,6 +142,6 @@ var fakedata = [
 
 ReactDOM.render(
    // <CommentBox data={data} />,
-    <CommentBox url="http://kbb7303700.corp.kbb.com:3000/foods" pollInterval={3000}/>,
+    <CommentBox url="/foods" pollInterval={3000}/>,
     document.getElementById('content')
 );

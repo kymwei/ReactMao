@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "go": "babel --presets react src --watch --out-dir build",
-    "start":"node server.js"
+    "build": "babel --presets react src --watch --out-dir build",
+    "start":"node serverAPI.js"
   },
   "author": "",
   "license": "ISC",
