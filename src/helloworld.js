@@ -106,7 +106,7 @@ var CommentForm = React.createClass({
                 />
                 <input
                     type="text"
-                    placeholder="how much mao rate for this food..."
+                    placeholder="What rating would Mister Mao give this food..."
                     value={this.state.stars}
                     onChange={this.handleTextChange}
                 />
