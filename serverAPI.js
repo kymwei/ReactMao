@@ -18,7 +18,7 @@ var rootPath = path.normalize(__dirname);
 //app.use(express.static(rootPath + '/app'));
 
 router.get("/",function(req,res){
-    res.json({"error" : false,"message" : "Hello World"});
+    res.json({"error" : false,"message" : "Hi Mom!"});
 });
 
 
